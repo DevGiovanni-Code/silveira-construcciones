@@ -8,5 +8,92 @@
   <script src="../js/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- =========================
+       CABECERA Y NAVEGACIÓN
+  ========================= -->
+  <header class="site-header">
+    <a class="site-brand" href="../">Silveira Construcciones</a>
+    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="true" disabled>Menú</button>
+    <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../">Inicio</a></li>
+        <li><a class="nav-link" href="../proyectos/">Proyectos</a></li>
+        <li><a class="nav-link" href="../servicios/" aria-current="page">Servicios</a></li>
+        <li><a class="nav-link" href="../nosotros/">Nosotros</a></li>
+        <li><a class="nav-link" href="../contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="button-link" href="../contacto/">Solicitar cotización</a>
+  </header>
+
+  <main id="contenido-principal" tabindex="-1">
+    <header class="page-intro">
+      <h1 id="page-title">Servicios</h1>
+      <p>Reformas integrales, construcción, finalización de obras y mantenimiento.</p>
+    </header>
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
+    <section id="nuestros-servicios" aria-labelledby="nuestros-servicios-title">
+      <h2 id="nuestros-servicios-title">Qué hacemos</h2>
+      <div class="services-grid">
+        <section class="service-card" aria-labelledby="service-1-title">
+          <h3 id="service-1-title">Reformas integrales</h3>
+          <!-- Pendiente: confirmar el alcance de este servicio e incorporar fotografías reales con sus textos alternativos. -->
+        </section>
+        <section class="service-card" aria-labelledby="service-2-title">
+          <h3 id="service-2-title">Construcción</h3>
+          <!-- Pendiente: confirmar el alcance de este servicio e incorporar fotografías reales con sus textos alternativos. -->
+        </section>
+        <section class="service-card" aria-labelledby="service-3-title">
+          <h3 id="service-3-title">Finalización de obras</h3>
+          <!-- Pendiente: confirmar el alcance de este servicio e incorporar fotografías reales con sus textos alternativos. -->
+        </section>
+        <section class="service-card" aria-labelledby="service-4-title">
+          <h3 id="service-4-title">Mantenimiento</h3>
+          <!-- Pendiente: confirmar el alcance de este servicio e incorporar fotografías reales con sus textos alternativos. -->
+        </section>
+      </div>
+    </section>
+
+    <section id="informacion-del-proyecto" aria-labelledby="informacion-del-proyecto-title">
+      <h2 id="informacion-del-proyecto-title">Información para tu proyecto</h2>
+      <!-- Pendiente: confirmar la información complementaria que necesita el cliente para consultar por los servicios, sin añadir promesas ni especificaciones no verificadas. -->
+    </section>
+
+    <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
+      <h2 id="cotizacion-title">Solicita una cotización</h2>
+      <p>Cuéntanos qué trabajo necesitas realizar.</p>
+      <a class="button-link" href="../contacto/">Solicitar cotización</a>
+    </section>
+  </main>
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================= -->
+  <footer class="site-footer">
+    <a class="site-brand" href="../">Silveira Construcciones</a>
+    <nav aria-label="Navegación del pie de página">
+      <ul class="footer-nav-list">
+        <li><a href="../">Inicio</a></li>
+        <li><a href="../proyectos/">Proyectos</a></li>
+        <li><a href="../servicios/" aria-current="page">Servicios</a></li>
+        <li><a href="../nosotros/">Nosotros</a></li>
+        <li><a href="../contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <a href="../contacto/">Contacto y cotizaciones</a>
+      <!-- Pendiente: incorporar los datos de contacto verificados en un elemento address. -->
+    </div>
+    <div class="footer-social">
+      <!-- Pendiente: incorporar el enlace al perfil real de Instagram una vez confirmada su URL. -->
+    </div>
+    <p class="copyright"><small>&copy; Silveira Construcciones</small></p>
+  </footer>
 </body>
 </html>

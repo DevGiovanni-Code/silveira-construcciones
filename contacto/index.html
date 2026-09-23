@@ -8,5 +8,111 @@
   <script src="../js/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- =========================
+       CABECERA Y NAVEGACIÓN
+  ========================= -->
+  <header class="site-header">
+    <a class="site-brand" href="../">Silveira Construcciones</a>
+    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="true" disabled>Menú</button>
+    <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="../">Inicio</a></li>
+        <li><a class="nav-link" href="../proyectos/">Proyectos</a></li>
+        <li><a class="nav-link" href="../servicios/">Servicios</a></li>
+        <li><a class="nav-link" href="../nosotros/">Nosotros</a></li>
+        <li><a class="nav-link" href="../contacto/" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="button-link" href="../contacto/">Solicitar cotización</a>
+  </header>
+
+  <main id="contenido-principal" tabindex="-1">
+    <header class="page-intro">
+      <h1 id="page-title">Solicitar cotización</h1>
+      <p>Cuéntanos qué tipo de trabajo necesitas realizar.</p>
+    </header>
+
+    <section id="medios-de-contacto" aria-labelledby="medios-de-contacto-title">
+      <h2 id="medios-de-contacto-title">Medios de contacto</h2>
+      <h3>WhatsApp</h3>
+      <!-- Pendiente: confirmar el número y el enlace de WhatsApp antes de habilitar el contacto. -->
+      <h3>Datos comerciales</h3>
+      <!-- Pendiente: confirmar teléfono, correo electrónico, dirección si corresponde y demás datos comerciales. Incorporar los datos de contacto en un elemento address cuando estén disponibles. -->
+    </section>
+
+    <!-- =========================
+         FORMULARIO DE COTIZACIÓN
+    ========================= -->
+
+    <section id="formulario" aria-labelledby="formulario-title">
+      <h2 id="formulario-title">Cuéntanos sobre tu proyecto</h2>
+      <p id="form-status">El formulario todavía no está habilitado para enviar solicitudes.</p>
+      <form class="contact-form" aria-describedby="form-status">
+        <fieldset disabled>
+          <legend>Datos de la solicitud</legend>
+          <div class="form-field">
+            <label for="contact-name">Nombre</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Correo electrónico</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="contact-phone">Teléfono</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="form-field">
+            <label for="project-type">Tipo de proyecto</label>
+            <select id="project-type" name="projectType">
+              <option value="">Selecciona un tipo de proyecto</option>
+              <option value="renovation">Reformas integrales</option>
+              <option value="construction">Construcción</option>
+              <option value="completion">Finalización de obras</option>
+              <option value="maintenance">Mantenimiento</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="6"></textarea>
+          </div>
+          <button type="button" disabled>Enviar solicitud</button>
+        </fieldset>
+      </form>
+      <!-- Pendiente: definir el envío, los campos obligatorios y el tratamiento de datos antes de habilitar el formulario. -->
+    </section>
+
+    <section id="consulta" aria-labelledby="consulta-title">
+      <h2 id="consulta-title">Información para tu consulta</h2>
+      <p>Puedes preparar una descripción del trabajo que necesitas y las preguntas que quieras plantear.</p>
+      <!-- Pendiente: confirmar qué información debe aportar el cliente y cómo se desarrolla la cotización, sin prometer plazos de respuesta. -->
+    </section>
+  </main>
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================= -->
+  <footer class="site-footer">
+    <a class="site-brand" href="../">Silveira Construcciones</a>
+    <nav aria-label="Navegación del pie de página">
+      <ul class="footer-nav-list">
+        <li><a href="../">Inicio</a></li>
+        <li><a href="../proyectos/">Proyectos</a></li>
+        <li><a href="../servicios/">Servicios</a></li>
+        <li><a href="../nosotros/">Nosotros</a></li>
+        <li><a href="../contacto/" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <a href="../contacto/">Contacto y cotizaciones</a>
+      <!-- Pendiente: incorporar los datos de contacto verificados en un elemento address. -->
+    </div>
+    <div class="footer-social">
+      <!-- Pendiente: incorporar el enlace al perfil real de Instagram una vez confirmada su URL. -->
+    </div>
+    <p class="copyright"><small>&copy; Silveira Construcciones</small></p>
+  </footer>
 </body>
 </html>
