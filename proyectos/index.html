@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyectos | Silveira Construcciones</title>
+  <link rel="icon" type="image/png" href="../images/brand/silveira-logo.png">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
@@ -14,18 +15,29 @@
        CABECERA Y NAVEGACIÓN
   ========================= -->
   <header class="site-header">
-    <a class="site-brand" href="../">Silveira Construcciones</a>
-    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="true" disabled>Menú</button>
-    <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
-      <ul class="nav-list">
-        <li><a class="nav-link" href="../">Inicio</a></li>
-        <li><a class="nav-link" href="../proyectos/" aria-current="page">Proyectos</a></li>
-        <li><a class="nav-link" href="../servicios/">Servicios</a></li>
-        <li><a class="nav-link" href="../nosotros/">Nosotros</a></li>
-        <li><a class="nav-link" href="../contacto/">Contacto</a></li>
-      </ul>
-    </nav>
-    <a class="button-link" href="../contacto/">Solicitar cotización</a>
+    <div class="container site-header__inner">
+      <a class="header-brand" href="../" aria-label="Silveira Construcciones — Inicio">
+        <img class="header-brand__logo" src="../images/brand/silveira-logo.png" alt="">
+        <span class="header-brand__text">
+          <span class="header-brand__name">Silveira Construcciones</span>
+          <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú de navegación" hidden>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="../">Inicio</a></li>
+            <li><a class="nav-link" href="../proyectos/" aria-current="page">Proyectos</a></li>
+            <li><a class="nav-link" href="../servicios/">Servicios</a></li>
+            <li><a class="nav-link" href="../nosotros/">Nosotros</a></li>
+            <li><a class="nav-link" href="../contacto/">Contacto</a></li>
+        </ul>
+        <a class="button-link button-link--secondary header-cta" href="../contacto/">Solicitar cotización</a>
+      </nav>
+    </div>
   </header>
 
   <main id="contenido-principal" tabindex="-1">

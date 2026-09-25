@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio | Silveira Construcciones</title>
+  <link rel="icon" type="image/png" href="images/brand/silveira-logo.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -14,18 +15,29 @@
        CABECERA Y NAVEGACIÓN
   ========================= -->
   <header class="site-header">
-    <a class="site-brand" href="./">Silveira Construcciones</a>
-    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="true" disabled>Menú</button>
-    <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
-      <ul class="nav-list">
-        <li><a class="nav-link" href="./" aria-current="page">Inicio</a></li>
-        <li><a class="nav-link" href="proyectos/">Proyectos</a></li>
-        <li><a class="nav-link" href="servicios/">Servicios</a></li>
-        <li><a class="nav-link" href="nosotros/">Nosotros</a></li>
-        <li><a class="nav-link" href="contacto/">Contacto</a></li>
-      </ul>
-    </nav>
-    <a class="button-link" href="contacto/">Solicitar cotización</a>
+    <div class="container site-header__inner">
+      <a class="header-brand" href="./" aria-label="Silveira Construcciones — Inicio">
+        <img class="header-brand__logo" src="images/brand/silveira-logo.png" alt="">
+        <span class="header-brand__text">
+          <span class="header-brand__name">Silveira Construcciones</span>
+          <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú de navegación" hidden>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menú</span>
+      </button>
+      <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="./" aria-current="page">Inicio</a></li>
+            <li><a class="nav-link" href="proyectos/">Proyectos</a></li>
+            <li><a class="nav-link" href="servicios/">Servicios</a></li>
+            <li><a class="nav-link" href="nosotros/">Nosotros</a></li>
+            <li><a class="nav-link" href="contacto/">Contacto</a></li>
+        </ul>
+        <a class="button-link button-link--secondary header-cta" href="contacto/">Solicitar cotización</a>
+      </nav>
+    </div>
   </header>
 
   <main id="contenido-principal" tabindex="-1">
@@ -33,11 +45,22 @@
          PRESENTACIÓN
     ========================= -->
     <section class="hero" aria-labelledby="page-title">
-      <h1 id="page-title">Silveira Construcciones</h1>
-      <p>Reformas integrales, construcción, finalización de obras y mantenimiento.</p>
-      <a class="button-link" href="contacto/">Solicitar cotización</a>
-      <a href="proyectos/">Ver proyectos</a>
-      <!-- Pendiente: validar la propuesta comercial definitiva e incorporar una fotografía real de una obra con texto alternativo contextual. -->
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">REFORMAS INTEGRALES · CONSTRUCCIÓN · TERMINACIONES</p>
+          <h1 id="page-title">Obras reales. Espacios transformados con criterio y precisión.</h1>
+          <p class="hero__description">Reformas, construcción y terminaciones ejecutadas con atención al detalle en cada etapa del proyecto.</p>
+          <div class="hero__actions">
+            <a class="button-link" href="contacto/">Solicitar cotización</a>
+            <a class="button-link button-link--secondary" href="proyectos/">Ver proyectos</a>
+          </div>
+          <p class="hero__proof">Proyectos reales · Fotografías de trabajos realizados</p>
+        </div>
+        <figure class="hero__media">
+          <img class="hero__image" src="images/hero/hero-bathroom.png" alt="Baño reformado con revestimiento gris, mampara de vidrio y perfiles negros." fetchpriority="high">
+          <figcaption>Proyecto real · Reforma de baño</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="trabajos-reales" aria-labelledby="trabajos-reales-title">
