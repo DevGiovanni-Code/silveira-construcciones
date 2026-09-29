@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="../images/brand/silveira-logo.png">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
+  <script type="module" src="../js/projects.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
@@ -41,34 +42,25 @@
   </header>
 
   <main id="contenido-principal" tabindex="-1">
-    <header class="page-intro">
-      <h1 id="page-title">Proyectos</h1>
-      <p>Esta galería reunirá trabajos reales realizados por Silveira Construcciones, documentados a través de imágenes de cada obra.</p>
+    <header class="page-intro section-spacing">
+      <div class="container projects-intro">
+        <h1 id="page-title">Proyectos</h1>
+        <p>Trabajos reales realizados por Silveira Construcciones.</p>
+      </div>
     </header>
 
     <!-- =========================
          GALERÍA DE PROYECTOS
     ========================= -->
 
-    <section id="galeria" aria-labelledby="galeria-title">
-      <h2 id="galeria-title">Galería de trabajos</h2>
-      <div class="project-filters">
-        <!-- Pendiente: confirmar las categorías antes de incorporar controles de filtrado accesibles. -->
-      </div>
-      <div class="projects-grid">
-        <!-- Aquí se incorporarán proyectos reales con sus datos y fotografías confirmados. Cada proyecto podrá abrir el diálogo de detalle, sin páginas individuales. -->
+    <section id="project-gallery" class="projects-section section-spacing" aria-labelledby="project-gallery-title">
+      <div class="container">
+        <div class="projects-intro">
+          <h2 id="project-gallery-title">Galería de trabajos</h2>
+        </div>
+        <div class="projects-grid" data-projects="all"></div>
       </div>
     </section>
-
-    <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title">
-      <h2 id="project-dialog-title">Detalle del proyecto</h2>
-      <div class="project-detail">
-        <!-- Pendiente: incorporar información y fotografías del proyecto seleccionado. La apertura, el foco y la navegación se implementarán en la etapa de JavaScript. -->
-      </div>
-      <form method="dialog">
-        <button type="submit">Cerrar detalle del proyecto</button>
-      </form>
-    </dialog>
 
     <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
       <h2 id="cotizacion-title">Solicita una cotización</h2>

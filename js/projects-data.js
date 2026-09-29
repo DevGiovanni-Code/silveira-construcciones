@@ -1,0 +1,42 @@
+export const projects = [
+  {
+    id: "punta-espinillo-bano",
+    folder: "punta-espinillo-bano",
+    title: "Reforma completa de baño",
+    location: "Punta Espinillo",
+    // cover define la fotografía de presentación del proyecto.
+    cover: "img-07.png",
+    showOnHome: true,
+    // images debe permanecer en orden cronológico.
+    images: [
+      "img-01.png",
+      "img-02.png",
+      "img-03.png",
+      "img-04.png",
+      "img-05.png",
+      "img-06.png",
+      "img-07.png",
+      "img-08.png",
+      "img-09.png",
+      "img-10.png",
+    ],
+  },
+  {
+    id: "reforma-prado-bano",
+    folder: "reforma-prado-bano",
+    title: "Reforma completa de baño",
+    location: "Prado, Montevideo",
+    cover: "img-04.png",
+    showOnHome: true,
+    images: [
+      "img-01.png",
+      "img-02.png",
+      "img-03.png",
+      "img-04.png",
+      "img-05.png",
+      "img-06.png",
+      "img-07.png",
+      "img-08.png",
+    ],
+  },
+];
