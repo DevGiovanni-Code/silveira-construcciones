@@ -42,7 +42,7 @@
   </header>
 
   <main id="contenido-principal" tabindex="-1">
-    <header class="page-intro section-spacing">
+    <header class="page-intro projects-page-intro section-spacing">
       <div class="container projects-intro">
         <h1 id="page-title">Proyectos</h1>
         <p>Trabajos reales realizados por Silveira Construcciones.</p>
@@ -61,6 +61,28 @@
         <div class="projects-grid" data-projects="all"></div>
       </div>
     </section>
+
+    <dialog id="project-gallery-dialog" class="project-gallery" aria-labelledby="project-gallery-dialog-title" aria-describedby="project-gallery-location">
+      <div class="project-gallery__panel">
+        <header class="project-gallery__header">
+          <div>
+            <h2 id="project-gallery-dialog-title" class="project-gallery__title"></h2>
+            <p id="project-gallery-location" class="project-gallery__location"></p>
+          </div>
+          <button class="project-gallery__control project-gallery__close" type="button" aria-label="Cerrar galería">×</button>
+        </header>
+
+        <div class="project-gallery__stage">
+          <img class="project-gallery__image" alt="">
+        </div>
+
+        <div class="project-gallery__controls">
+          <button class="project-gallery__control project-gallery__previous" type="button" aria-label="Foto anterior">←</button>
+          <p class="project-gallery__counter" aria-live="polite"></p>
+          <button class="project-gallery__control project-gallery__next" type="button" aria-label="Foto siguiente">→</button>
+        </div>
+      </div>
+    </dialog>
 
     <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
       <h2 id="cotizacion-title">Solicita una cotización</h2>
