@@ -1,150 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Silveira Construcciones</title>
-  <link rel="icon" type="image/png" href="images/brand/silveira-logo.png">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-  <script type="module" src="js/projects.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | Silveira Construcciones</title>
+    <link rel="icon" type="image/png" href="images/brand/silveira-logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script type="module" src="js/projects.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">
+      Saltar al contenido principal
+    </a>
 
-  <!-- =========================
+    <!-- =========================
        CABECERA Y NAVEGACIÓN
   ========================= -->
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="header-brand" href="./" aria-label="Silveira Construcciones — Inicio">
-        <img class="header-brand__logo" src="images/brand/silveira-logo.png" alt="">
-        <span class="header-brand__text">
-          <span class="header-brand__name">Silveira Construcciones</span>
-          <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú de navegación" hidden>
-        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>Menú</span>
-      </button>
-      <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
-        <ul class="nav-list">
-            <li><a class="nav-link" href="./" aria-current="page">Inicio</a></li>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a
+          class="header-brand"
+          href="./"
+          aria-label="Silveira Construcciones — Inicio"
+        >
+          <img
+            class="header-brand__logo"
+            src="images/brand/silveira-logo.png"
+            alt=""
+          />
+          <span class="header-brand__text">
+            <span class="header-brand__name">Silveira Construcciones</span>
+            <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+          hidden
+        >
+          <span class="menu-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>Menú</span>
+        </button>
+        <nav
+          id="main-navigation"
+          class="main-nav"
+          aria-label="Navegación principal"
+        >
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="./" aria-current="page">Inicio</a>
+            </li>
             <li><a class="nav-link" href="proyectos/">Proyectos</a></li>
             <li><a class="nav-link" href="servicios/">Servicios</a></li>
-            <li><a class="nav-link" href="nosotros/">Nosotros</a></li>
+            <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
             <li><a class="nav-link" href="contacto/">Contacto</a></li>
-        </ul>
-        <a class="button-link button-link--secondary header-cta" href="contacto/">Solicitar cotización</a>
-      </nav>
-    </div>
-  </header>
+          </ul>
+          <a
+            class="button-link button-link--secondary header-cta"
+            href="contacto/"
+          >
+            Solicitar cotización
+          </a>
+        </nav>
+      </div>
+    </header>
 
-  <main id="contenido-principal" tabindex="-1">
-    <!-- =========================
+    <main id="contenido-principal" tabindex="-1">
+      <!-- =========================
          PRESENTACIÓN
     ========================= -->
-    <section class="hero" aria-labelledby="page-title">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="hero__eyebrow">REFORMAS INTEGRALES · CONSTRUCCIÓN · TERMINACIONES</p>
-          <h1 id="page-title">Obras reales. Espacios transformados con criterio y precisión.</h1>
-          <p class="hero__description">Reformas, construcción y terminaciones ejecutadas con atención al detalle en cada etapa del proyecto.</p>
-          <div class="hero__actions">
-            <a class="button-link" href="contacto/">Solicitar cotización</a>
-            <a class="button-link button-link--secondary" href="proyectos/">Ver proyectos</a>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              REFORMAS INTEGRALES · CONSTRUCCIÓN · TERMINACIONES
+            </p>
+            <h1 id="page-title">
+              Obras reales. Espacios transformados con criterio y precisión.
+            </h1>
+            <p class="hero__description">
+              Reformas, construcción y terminaciones ejecutadas con atención al
+              detalle en cada etapa del proyecto.
+            </p>
+            <div class="hero__actions">
+              <a class="button-link" href="contacto/">Solicitar cotización</a>
+              <a class="button-link button-link--secondary" href="proyectos/">
+                Ver proyectos
+              </a>
+            </div>
+            <p class="hero__proof">
+              Proyectos reales · Fotografías de trabajos realizados
+            </p>
           </div>
-          <p class="hero__proof">Proyectos reales · Fotografías de trabajos realizados</p>
+          <figure class="hero__media">
+            <img
+              class="hero__image"
+              src="images/hero/hero-bathroom.png"
+              alt="Baño reformado con revestimiento gris, mampara de vidrio y perfiles negros."
+              fetchpriority="high"
+            />
+            <figcaption>Proyecto real · Reforma de baño</figcaption>
+          </figure>
         </div>
-        <figure class="hero__media">
-          <img class="hero__image" src="images/hero/hero-bathroom.png" alt="Baño reformado con revestimiento gris, mampara de vidrio y perfiles negros." fetchpriority="high">
-          <figcaption>Proyecto real · Reforma de baño</figcaption>
-        </figure>
-      </div>
-    </section>
+      </section>
 
-    <section id="home-projects" class="projects-section section-spacing" aria-labelledby="home-projects-title">
-      <div class="container">
-        <header class="projects-section__header">
-          <div class="projects-intro">
-            <h2 id="home-projects-title">Algunos de nuestros proyectos</h2>
-            <p>Una selección de trabajos realizados por Silveira Construcciones.</p>
+      <section
+        id="home-projects"
+        class="projects-section section-spacing"
+        aria-labelledby="home-projects-title"
+      >
+        <div class="container">
+          <header class="projects-section__header">
+            <div class="projects-intro">
+              <h2 id="home-projects-title">Algunos de nuestros proyectos</h2>
+              <p>
+                Una selección de trabajos realizados por Silveira
+                Construcciones.
+              </p>
+            </div>
+            <a
+              class="button-link button-link--secondary projects-section__link"
+              href="proyectos/"
+            >
+              Ver todos los proyectos
+            </a>
+          </header>
+          <div class="projects-grid" data-projects="home"></div>
+        </div>
+      </section>
+
+      <section
+        id="servicios"
+        class="services-section section-spacing"
+        aria-labelledby="servicios-title"
+      >
+        <div class="container services-section__inner">
+          <header class="services-section__header">
+            <h2 id="servicios-title">Nuestros servicios</h2>
+          </header>
+          <ul class="services-list">
+            <li>Reformas integrales</li>
+            <li>Construcción</li>
+            <li>Finalización de obras</li>
+            <li>Mantenimiento</li>
+          </ul>
+          <div class="services-section__actions">
+            <a
+              class="button-link button-link--secondary services-section__link"
+              href="servicios/"
+            >
+              <span class="services-section__link-text">
+                Conocer los servicios
+              </span>
+            </a>
+            <a class="services-section__explore" href="#nosotros">
+              Conoce más sobre nosotros
+            </a>
           </div>
-          <a class="button-link button-link--secondary projects-section__link" href="proyectos/">Ver todos los proyectos</a>
-        </header>
-        <div class="projects-grid" data-projects="home"></div>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section id="servicios" class="services-section section-spacing" aria-labelledby="servicios-title">
-      <div class="container services-section__inner">
-        <header class="services-section__header">
-          <h2 id="servicios-title">Nuestros servicios</h2>
-        </header>
-        <ul class="services-list">
-          <li>Reformas integrales</li>
-          <li>Construcción</li>
-          <li>Finalización de obras</li>
-          <li>Mantenimiento</li>
-        </ul>
-        <a class="button-link button-link--secondary services-section__link" href="servicios/">
-          <span class="services-section__link-text">Conocer los servicios</span>
-        </a>
-      </div>
-    </section>
+      <section
+        id="nosotros"
+        class="home-about section-spacing"
+        aria-labelledby="nosotros-title"
+      >
+        <div class="container">
+          <header class="home-about__intro">
+            <p class="home-about__eyebrow">NOSOTROS</p>
+            <h2 id="nosotros-title">Conoce Silveira Construcciones</h2>
+            <p class="home-about__description">
+              Cada proyecto comienza con una necesidad distinta. En Silveira
+              Construcciones trabajamos en reformas, construcción y
+              terminaciones poniendo el foco en una ejecución prolija, el
+              cuidado de los detalles y el compromiso con cada obra.
+            </p>
+          </header>
 
-    <section id="nosotros" aria-labelledby="nosotros-title">
-      <h2 id="nosotros-title">Conoce Silveira Construcciones</h2>
-      <h3>Nicolás Silveira</h3>
-      <!-- Pendiente: incorporar una presentación confirmada de Nicolás Silveira y una fotografía real junto a una obra de la empresa. -->
-      <a href="nosotros/">Más sobre nosotros</a>
-    </section>
+          <section
+            id="instagram"
+            class="home-about__subsection"
+            aria-labelledby="instagram-title"
+          >
+            <header class="home-about__subsection-header">
+              <h3 id="instagram-title">Nuestro trabajo, de cerca</h3>
+              <p class="home-about__description">
+                Algunas de nuestras publicaciones del Instagram oficial.
+              </p>
+            </header>
+            <ul class="home-about__posts">
+              <li class="home-about__post">
+                <a
+                  class="home-about__post-link"
+                  href="https://www.instagram.com/p/DdKcmoMlL9q/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver publicación de Silveira Construcciones sobre la piscina en Balneario Guazuvirá en Instagram (se abre en una nueva pestaña)"
+                >
+                  <img
+                    src="images/instagram/piscina-guazuvira-instagram-3x4.png"
+                    alt="Captura de una publicación del Instagram de Silveira Construcciones: piscina vacía revestida en tonos oscuros en Balneario Guazuvirá, con una residencia al fondo."
+                    width="702"
+                    height="936"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li class="home-about__post">
+                <a
+                  class="home-about__post-link"
+                  href="https://www.instagram.com/p/DYR6i8Tjaoy/?img_index=14"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver publicación de Silveira Construcciones sobre el trabajo en Edificio Ame en Instagram (se abre en una nueva pestaña)"
+                >
+                  <img
+                    src="images/instagram/edificio-ame-instagram-3x4.png"
+                    alt="Captura de una publicación del Instagram de Silveira Construcciones: instalación de grandes piezas de porcelanato con niveladores visibles en un ambiente en obras del Edificio Ame."
+                    width="702"
+                    height="936"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li class="home-about__post">
+                <a
+                  class="home-about__post-link"
+                  href="https://www.instagram.com/p/DFDsxB-Jdi2/?img_index=2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver publicación de Silveira Construcciones sobre la farmacia San Roque en Punta Carretas Shopping en Instagram (se abre en una nueva pestaña)"
+                >
+                  <img
+                    src="images/instagram/san-roque-punta-carretas-instagram-3x4.png"
+                    alt="Publicación del Instagram de Silveira Construcciones: interior de la farmacia San Roque en Punta Carretas Shopping durante trabajos de colocación de porcelanato."
+                    width="1086"
+                    height="1448"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+            </ul>
+            <div class="home-about__instagram-actions">
+              <a
+                class="home-about__instagram-link"
+                href="https://www.instagram.com/silveira.construcciones/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver nuestro Instagram (se abre en una nueva pestaña)"
+              >
+                Ver nuestro Instagram
+              </a>
+            </div>
+          </section>
 
-    <section id="instagram" aria-labelledby="instagram-title">
-      <h2 id="instagram-title">Silveira Construcciones en Instagram</h2>
-      <!-- Pendiente: confirmar la URL del perfil real e incorporar un enlace externo con texto descriptivo y contenido visual autorizado. -->
-    </section>
+          <section
+            id="testimonios"
+            class="home-about__subsection"
+            aria-labelledby="testimonios-title"
+          >
+            <header class="home-about__subsection-header">
+              <h3 id="testimonios-title">Lo que dicen nuestros clientes</h3>
+              <p class="home-about__description">
+                Comentarios reales compartidos por nuestros clientes.
+              </p>
+            </header>
+            <ul class="home-about__comments">
+              <li class="home-about__comment">
+                <img
+                  src="images/testimonials/img-01.jpg"
+                  alt="Comentario de sebanogu: «Empezó siendo una casa semi abandonada y terminó siendo el hogar que siempre quisimos gracias por el laburo»"
+                  width="828"
+                  height="552"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="home-about__comment">
+                <img
+                  src="images/testimonials/img-02.jpg"
+                  alt="Comentario de elivilaa: «Muchas gracias Nico y equipo, excelente trabajo! Muy recomendable, responsables y súper prolijos.»"
+                  width="828"
+                  height="552"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="home-about__comment">
+                <img
+                  src="images/testimonials/img-03.jpg"
+                  alt="Comentario de eugeniamartinez2612: «Siempre vamos a estar agradecidos por tan excelente trabajo, muy contentos con la el resultado!!!! Cada detalle es único sin dudas es por como se toman el trabajo ustedes , están en cada detalle ,destacar la prolijidad y el compromiso con el que trabajan sin dudas son los mejores y así los recomendaré siempre!! Muchísimas gracias a todo el equipo que lo hizo posible!!»"
+                  width="828"
+                  height="552"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="home-about__comment">
+                <img
+                  src="images/testimonials/img-04.jpg"
+                  alt="Comentario de a.sofiaferreira: «Quedó hermoso mi baño! Súper contenta con el laburo que hicieron. Muy responsables y con tremenda disposición para todo. Gracias !»"
+                  width="828"
+                  height="552"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
 
-    <section id="proceso" aria-labelledby="proceso-title">
-      <h2 id="proceso-title">Cómo trabajamos</h2>
-      <!-- Pendiente: confirmar las etapas del proceso de trabajo antes de incorporarlas en una lista ordenada. -->
-    </section>
+      <section id="proceso" aria-labelledby="proceso-title" hidden>
+        <h2 id="proceso-title">Cómo trabajamos</h2>
+        <!-- Pendiente: confirmar las etapas del proceso de trabajo antes de incorporarlas en una lista ordenada. -->
+      </section>
 
-    <section id="testimonios" aria-labelledby="testimonios-title">
-      <h2 id="testimonios-title">Clientes y testimonios</h2>
-      <!-- Aquí se incorporarán los testimonios y las referencias de clientes reales cuando estén disponibles y autorizados. -->
-    </section>
+      <section
+        id="cotizacion"
+        class="contact-cta"
+        aria-labelledby="cotizacion-title"
+      >
+        <h2 id="cotizacion-title">Solicita una cotización</h2>
+        <p>Cuéntanos qué trabajo necesitas realizar.</p>
+        <a class="button-link" href="contacto/">Solicitar cotización</a>
+      </section>
+    </main>
 
-    <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
-      <h2 id="cotizacion-title">Solicita una cotización</h2>
-      <p>Cuéntanos qué trabajo necesitas realizar.</p>
-      <a class="button-link" href="contacto/">Solicitar cotización</a>
-    </section>
-  </main>
-
-  <!-- =========================
+    <!-- =========================
        PIE DE PÁGINA
   ========================= -->
-  <footer class="site-footer">
-    <a class="site-brand" href="./">Silveira Construcciones</a>
-    <nav aria-label="Navegación del pie de página">
-      <ul class="footer-nav-list">
-        <li><a href="./" aria-current="page">Inicio</a></li>
-        <li><a href="proyectos/">Proyectos</a></li>
-        <li><a href="servicios/">Servicios</a></li>
-        <li><a href="nosotros/">Nosotros</a></li>
-        <li><a href="contacto/">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="footer-contact">
-      <a href="contacto/">Contacto y cotizaciones</a>
-      <!-- Pendiente: incorporar los datos de contacto verificados en un elemento address. -->
-    </div>
-    <div class="footer-social">
-      <!-- Pendiente: incorporar el enlace al perfil real de Instagram una vez confirmada su URL. -->
-    </div>
-    <p class="copyright"><small>&copy; Silveira Construcciones</small></p>
-  </footer>
-</body>
+    <footer class="site-footer">
+      <a class="site-brand" href="./">Silveira Construcciones</a>
+      <nav aria-label="Navegación del pie de página">
+        <ul class="footer-nav-list">
+          <li><a href="./" aria-current="page">Inicio</a></li>
+          <li><a href="proyectos/">Proyectos</a></li>
+          <li><a href="servicios/">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="contacto/">Contacto y cotizaciones</a>
+        <!-- Pendiente: incorporar los datos de contacto verificados en un elemento address. -->
+      </div>
+      <div class="footer-social">
+        <!-- Pendiente: incorporar el enlace al perfil real de Instagram una vez confirmada su URL. -->
+      </div>
+      <p class="copyright"><small>&copy; Silveira Construcciones</small></p>
+    </footer>
+  </body>
 </html>

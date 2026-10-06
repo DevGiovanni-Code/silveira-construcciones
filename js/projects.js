@@ -36,6 +36,22 @@ function createProjectCard(project, isHome) {
   image.alt = `${project.title} en ${project.location}`;
   image.loading = 'lazy';
 
+  const mediaAction = document.createElement(isHome ? 'a' : 'button');
+  mediaAction.className = 'project-card__media-action';
+
+  if (isHome) {
+    mediaAction.href = getProjectUrl(project);
+    mediaAction.setAttribute('aria-label', `Ver proyecto: ${project.title} en ${project.location}`);
+  } else {
+    mediaAction.type = 'button';
+    mediaAction.setAttribute('aria-haspopup', 'dialog');
+    mediaAction.setAttribute('aria-controls', 'project-gallery-dialog');
+    mediaAction.setAttribute('aria-label', `Ver fotos de ${project.title} en ${project.location}`);
+    mediaAction.addEventListener('click', () => openProjectGallery(project, mediaAction));
+  }
+
+  mediaAction.append(image);
+
   const content = document.createElement('div');
   content.className = 'project-card__content';
 
@@ -77,7 +93,7 @@ function createProjectCard(project, isHome) {
     content.append(actions);
   }
 
-  article.append(image, content);
+  article.append(mediaAction, content);
   return article;
 }
 
