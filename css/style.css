@@ -1594,3 +1594,311 @@ body.is-project-gallery-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* =========================
+   PÁGINA DE CONTACTO
+========================= */
+.contact-page-intro {
+  background-color: var(--color-dark);
+  color: var(--color-light-gray);
+}
+
+.contact-page-intro__inner {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.contact-page-intro__eyebrow,
+.contact-card__eyebrow,
+.contact-section__eyebrow,
+.contact-prepare__eyebrow {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.contact-page-intro__eyebrow,
+.contact-card__eyebrow {
+  color: var(--color-gold);
+}
+
+.contact-page-intro h1 {
+  max-width: 23ch;
+  color: var(--color-white);
+}
+
+.contact-page-intro__description {
+  max-width: 55ch;
+  margin-block-start: 0;
+}
+
+.contact-section__inner,
+.contact-prepare__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2xl);
+}
+
+.contact-section__inner {
+  align-items: center;
+}
+
+.contact-section__content,
+.contact-prepare__content {
+  display: grid;
+  align-content: start;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+
+.contact-section__eyebrow,
+.contact-prepare__eyebrow {
+  padding-inline-start: var(--space-sm);
+  border-inline-start: 2px solid var(--color-gold);
+  color: var(--color-gray);
+}
+
+.contact-section__content h2,
+.contact-prepare__content h2 {
+  max-width: 22ch;
+}
+
+.contact-section__description,
+.contact-prepare__description {
+  max-width: 44ch;
+  color: var(--color-gray);
+}
+
+.contact-card {
+  display: grid;
+  gap: var(--space-md);
+  min-width: 0;
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl));
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark);
+  color: var(--color-light-gray);
+}
+
+.contact-card__title {
+  color: var(--color-white);
+}
+
+.contact-card__description {
+  max-width: 40ch;
+}
+
+.contact-card__number {
+  margin-block: var(--space-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-h3);
+  font-style: normal;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.contact-card__actions {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-sm);
+}
+
+.contact-card__whatsapp {
+  width: 100%;
+}
+
+.contact-card__whatsapp,
+.contact-form__submit {
+  min-height: 3rem;
+  padding-inline: var(--space-md);
+  border-color: #25d366;
+  background-color: #25d366;
+  color: var(--color-black);
+}
+
+.contact-whatsapp-icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex-shrink: 0;
+}
+
+.contact-card__instagram,
+.contact-card__guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 2.75rem;
+  max-width: 100%;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    text-decoration-color var(--transition-fast);
+}
+
+.contact-card__instagram {
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.contact-card__guide-link {
+  justify-self: start;
+  margin-block-start: var(--space-sm);
+  padding-block-start: var(--space-md);
+  border-block-start: 1px solid var(--color-gray);
+}
+
+.contact-card__instagram span,
+.contact-card__guide-link span {
+  flex-shrink: 0;
+  font-size: 1.25em;
+  font-weight: 400;
+  transition: transform var(--transition-fast);
+}
+
+.contact-card__instagram:focus-visible,
+.contact-card__guide-link:focus-visible {
+  color: var(--color-white);
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+}
+
+.contact-card__instagram:focus-visible span {
+  transform: translate(var(--space-xs), calc(var(--space-xs) * -1));
+}
+
+.contact-card__guide-link:focus-visible span {
+  transform: translateY(var(--space-xs));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-card__whatsapp:hover,
+  .contact-form__submit:hover:not(:disabled) {
+    border-color: #20bd5a;
+    background-color: #20bd5a;
+    color: var(--color-black);
+  }
+
+  .contact-card__instagram:hover,
+  .contact-card__guide-link:hover {
+    color: var(--color-white);
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+  }
+
+  .contact-card__instagram:hover span {
+    transform: translate(var(--space-xs), calc(var(--space-xs) * -1));
+  }
+
+  .contact-card__guide-link:hover span {
+    transform: translateY(var(--space-xs));
+  }
+}
+
+.contact-card__whatsapp:active,
+.contact-form__submit:active:not(:disabled) {
+  border-color: #1aa34c;
+  background-color: #1aa34c;
+  color: var(--color-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card__instagram:hover span,
+  .contact-card__instagram:focus-visible span,
+  .contact-card__guide-link:hover span,
+  .contact-card__guide-link:focus-visible span {
+    transform: none;
+  }
+}
+
+.contact-card a:focus-visible {
+  outline-color: var(--color-gold);
+  box-shadow: none;
+}
+
+.contact-prepare {
+  scroll-margin-block-start: 6rem;
+  background-color: var(--color-light-gray);
+}
+
+.contact-prepare__tips {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.contact-prepare__tips li + li {
+  margin-block-start: var(--space-sm);
+}
+
+.contact-prepare__photos {
+  margin-block-start: 0;
+  padding-block-start: var(--space-lg);
+  border-block-start: 1px solid var(--color-gray);
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+}
+
+.contact-form {
+  min-width: 0;
+}
+
+.contact-form__fields {
+  display: grid;
+  gap: var(--space-lg);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-form__legend {
+  margin-block-end: var(--space-lg);
+  font-weight: 600;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.contact-form__field label {
+  font-weight: 500;
+}
+
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+}
+
+.contact-form__note {
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+}
+
+.contact-form__submit:disabled {
+  border-color: var(--color-gray);
+  background-color: var(--color-light-gray);
+  color: var(--color-gray);
+}
+
+@media (min-width: 48rem) {
+  .contact-card__whatsapp {
+    width: auto;
+  }
+
+  .contact-form__submit {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .contact-section__inner,
+  .contact-prepare__inner {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--space-3xl);
+  }
+}

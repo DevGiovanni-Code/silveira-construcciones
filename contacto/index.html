@@ -41,65 +41,89 @@
   </header>
 
   <main id="contenido-principal" tabindex="-1">
-    <header class="page-intro">
-      <h1 id="page-title">Solicitar cotización</h1>
-      <p>Cuéntanos qué tipo de trabajo necesitas realizar.</p>
+    <header class="contact-page-intro section-spacing">
+      <div class="container contact-page-intro__inner">
+        <p class="contact-page-intro__eyebrow">CONTACTO</p>
+        <h1 id="page-title">Hablemos de tu reforma o proyecto</h1>
+        <p class="contact-page-intro__description">Cuéntanos qué necesitas y conversemos sobre el trabajo que tienes en mente.</p>
+      </div>
     </header>
 
-    <section id="medios-de-contacto" aria-labelledby="medios-de-contacto-title">
-      <h2 id="medios-de-contacto-title">Medios de contacto</h2>
-      <h3>WhatsApp</h3>
-      <!-- Pendiente: confirmar el número y el enlace de WhatsApp antes de habilitar el contacto. -->
-      <h3>Datos comerciales</h3>
-      <!-- Pendiente: confirmar teléfono, correo electrónico, dirección si corresponde y demás datos comerciales. Incorporar los datos de contacto en un elemento address cuando estén disponibles. -->
+    <section id="medios-de-contacto" class="contact-section section-spacing" aria-labelledby="contact-idea-title">
+      <div class="container contact-section__inner">
+        <div class="contact-section__content">
+          <p class="contact-section__eyebrow">TU IDEA</p>
+          <h2 id="contact-idea-title">¿Tienes una obra en mente?</h2>
+          <p class="contact-section__description">Cada trabajo comienza con una necesidad distinta. Escríbenos y cuéntanos qué quieres hacer; podemos conversar sobre el espacio, el tipo de trabajo y tu idea.</p>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-card__eyebrow">WHATSAPP</p>
+          <h2 id="contact-card-title" class="contact-card__title">Conversemos</h2>
+          <p class="contact-card__description">Escríbenos directamente y cuéntanos brevemente qué necesitas.</p>
+          <address class="contact-card__number">091 462 213</address>
+          <div class="contact-card__actions">
+            <a class="button-link contact-card__whatsapp" href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto." target="_blank" rel="noopener noreferrer"><svg class="contact-whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.13-1.35A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/></svg>Escribir por WhatsApp</a>
+            <a class="contact-card__instagram" href="https://www.instagram.com/silveira.construcciones/" target="_blank" rel="noopener noreferrer">Ver trabajos en Instagram <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="contact-card__guide-link" href="#preparar-consulta">Para facilitar tu consulta <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
     </section>
 
-    <!-- =========================
-         FORMULARIO DE COTIZACIÓN
-    ========================= -->
+    <section id="preparar-consulta" class="contact-prepare section-spacing" aria-labelledby="contact-prepare-title">
+      <div class="container contact-prepare__inner">
+        <div class="contact-prepare__content">
+          <p class="contact-prepare__eyebrow">PARA FACILITAR TU CONSULTA</p>
+          <h2 id="contact-prepare-title">Si quieres, cuéntanos un poco más</h2>
+          <p class="contact-prepare__description">Completa solo lo que quieras. Usaremos esta información para preparar tu mensaje de WhatsApp.</p>
+          <div class="contact-prepare__tips">
+            <p>Puedes contarnos:</p>
+            <ul>
+              <li>qué tipo de trabajo necesitas;</li>
+              <li>en qué zona o localidad se encuentra;</li>
+              <li>una breve descripción de lo que quieres realizar.</li>
+            </ul>
+          </div>
+          <p class="contact-prepare__photos">Las fotos puedes adjuntarlas directamente cuando se abra la conversación en WhatsApp.</p>
+        </div>
 
-    <section id="formulario" aria-labelledby="formulario-title">
-      <h2 id="formulario-title">Cuéntanos sobre tu proyecto</h2>
-      <p id="form-status">El formulario todavía no está habilitado para enviar solicitudes.</p>
-      <form class="contact-form" aria-describedby="form-status">
-        <fieldset disabled>
-          <legend>Datos de la solicitud</legend>
-          <div class="form-field">
-            <label for="contact-name">Nombre</label>
-            <input id="contact-name" name="name" type="text" autocomplete="name">
-          </div>
-          <div class="form-field">
-            <label for="contact-email">Correo electrónico</label>
-            <input id="contact-email" name="email" type="email" autocomplete="email">
-          </div>
-          <div class="form-field">
-            <label for="contact-phone">Teléfono</label>
-            <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="form-field">
-            <label for="project-type">Tipo de proyecto</label>
-            <select id="project-type" name="projectType">
-              <option value="">Selecciona un tipo de proyecto</option>
-              <option value="renovation">Reformas integrales</option>
-              <option value="construction">Construcción</option>
-              <option value="completion">Finalización de obras</option>
-              <option value="maintenance">Mantenimiento</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="contact-message">Mensaje</label>
-            <textarea id="contact-message" name="message" rows="6"></textarea>
-          </div>
-          <button type="button" disabled>Enviar solicitud</button>
-        </fieldset>
-      </form>
-      <!-- Pendiente: definir el envío, los campos obligatorios y el tratamiento de datos antes de habilitar el formulario. -->
-    </section>
-
-    <section id="consulta" aria-labelledby="consulta-title">
-      <h2 id="consulta-title">Información para tu consulta</h2>
-      <p>Puedes preparar una descripción del trabajo que necesitas y las preguntas que quieras plantear.</p>
-      <!-- Pendiente: confirmar qué información debe aportar el cliente y cómo se desarrolla la cotización, sin prometer plazos de respuesta. -->
+        <form class="contact-form" data-contact-whatsapp-form aria-labelledby="contact-prepare-title" aria-describedby="contact-form-status">
+          <fieldset class="contact-form__fields" disabled>
+            <legend class="contact-form__legend">Datos opcionales de tu consulta</legend>
+            <div class="contact-form__field">
+              <label for="contact-name">Nombre (opcional)</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name">
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-work-type">Tipo de trabajo (opcional)</label>
+              <select id="contact-work-type" name="workType">
+                <option value="">Selecciona una opción</option>
+                <option value="Reforma integral">Reforma integral</option>
+                <option value="Baño">Baño</option>
+                <option value="Cocina">Cocina</option>
+                <option value="Revestimiento">Revestimiento</option>
+                <option value="Construcción">Construcción</option>
+                <option value="Terminaciones">Terminaciones</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-location">Zona / localidad (opcional)</label>
+              <input id="contact-location" name="location" type="text" autocomplete="address-level2">
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-description">Breve descripción (opcional)</label>
+              <textarea id="contact-description" name="description" rows="5"></textarea>
+            </div>
+            <p id="contact-form-status" class="contact-form__note">El sitio no envía esta información por sí solo. Al continuar, se abrirá WhatsApp con tu mensaje preparado.</p>
+            <button class="button-link contact-form__submit" type="submit"><svg class="contact-whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.13-1.35A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/></svg>Continuar por WhatsApp</button>
+          </fieldset>
+          <noscript>
+            <p class="contact-form__note">Para escribirnos sin JavaScript, usa el enlace «Escribir por WhatsApp» de la sección de contacto.</p>
+          </noscript>
+        </form>
+      </div>
     </section>
   </main>
 

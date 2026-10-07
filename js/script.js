@@ -66,3 +66,35 @@
   window.addEventListener('pageshow', updateHeaderState);
   updateHeaderState();
 })();
+
+// Preparación opcional de consultas por WhatsApp, exclusiva de Contacto.
+(() => {
+  const form = document.querySelector('[data-contact-whatsapp-form]');
+
+  if (!form) return;
+
+  const whatsappNumber = '59891462213';
+  const baseMessage = 'Hola, vengo desde el sitio web de Silveira Construcciones y me gustaría consultar por mi reforma/proyecto.';
+  const fields = [
+    ['name', 'Nombre'],
+    ['workType', 'Tipo de trabajo'],
+    ['location', 'Zona/localidad'],
+    ['description', 'Consulta'],
+  ];
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const details = fields.flatMap(([name, label]) => {
+      const value = form.elements.namedItem(name).value.trim();
+      return value ? [label + ': ' + value] : [];
+    });
+    const message = baseMessage + (details.length ? '\n\n' + details.join('\n') : '');
+    const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+
+  // Habilitar solo después de interceptar el envío: sin JS, usar el enlace directo.
+  form.querySelector('fieldset').disabled = false;
+})();
