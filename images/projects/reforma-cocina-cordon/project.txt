@@ -1,0 +1,5 @@
+id: reforma-cocina-cordon
+title: Reforma completa de cocina
+location: Cordón, Montevideo
+cover: img-09.jpg
+showOnHome: true

@@ -1,0 +1,5 @@
+id: san-roque-punta-carretas
+title: Reforma en local comercial
+location: Punta Carretas Shopping, Montevideo
+cover: img-10.jpg
+showOnHome: false

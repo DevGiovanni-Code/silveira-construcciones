@@ -1902,3 +1902,308 @@ body.is-project-gallery-open {
     gap: var(--space-3xl);
   }
 }
+
+/* =========================
+   CTA FINAL Y FOOTER GLOBAL
+========================= */
+.contact-cta {
+  padding-block: var(--section-spacing);
+  background-color: var(--color-projects-background);
+}
+
+.contact-cta__inner {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.contact-cta__content {
+  display: grid;
+  gap: var(--space-md);
+  min-width: 0;
+}
+
+.contact-cta__eyebrow {
+  color: color-mix(in srgb, var(--color-gold-dark) 65%, var(--color-black));
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.contact-cta__description {
+  max-width: 55ch;
+  color: color-mix(in srgb, var(--color-gray) 90%, var(--color-black));
+}
+
+.contact-cta__link {
+  justify-self: start;
+  align-self: end;
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.contact-cta__link span {
+  flex-shrink: 0;
+  font-size: 1.25em;
+  font-weight: 400;
+  transition: transform var(--transition-fast);
+}
+
+.contact-cta__link:focus-visible span {
+  transform: translateX(var(--space-xs));
+}
+
+.site-footer {
+  padding-block: var(--section-spacing) var(--space-lg);
+  background-color: var(--color-black);
+  color: var(--color-light-gray);
+  font-size: 1rem;
+}
+
+.site-footer__inner,
+.site-footer__main {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.site-footer__main {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+.site-footer__brand-column,
+.site-footer__nav,
+.site-footer__contact {
+  min-width: 0;
+}
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.site-footer__brand-logo {
+  flex-shrink: 0;
+  width: 3rem;
+  height: auto;
+  max-height: 3rem;
+  object-fit: contain;
+}
+
+.site-footer__brand-text {
+  display: grid;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.site-footer__brand-name {
+  color: var(--color-white);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.site-footer__brand-tagline {
+  color: var(--color-gold);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.site-footer__description {
+  max-width: 36ch;
+  margin-block-start: var(--space-lg);
+}
+
+.site-footer__column-title,
+.site-footer__contact-label,
+.site-footer__bottom {
+  color: color-mix(in srgb, var(--color-light-gray) 70%, var(--color-black));
+  font-size: var(--font-size-small);
+}
+
+.site-footer__column-title {
+  margin-block-end: var(--space-md);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.site-footer__nav-list {
+  display: grid;
+  gap: var(--space-xs);
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  max-width: 100%;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.site-footer__nav-link::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: var(--space-xs);
+  height: 1px;
+  background-color: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
+
+.site-footer__nav-link[aria-current="page"]::after,
+.site-footer__nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.site-footer__contact-details {
+  display: grid;
+  gap: var(--space-lg);
+  font-style: normal;
+}
+
+.site-footer__contact-label {
+  letter-spacing: 0.06em;
+}
+
+.site-footer__whatsapp,
+.site-footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 2.75rem;
+  max-width: 100%;
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    text-decoration-color var(--transition-fast);
+}
+
+.site-footer__whatsapp::before {
+  content: "";
+  flex-shrink: 0;
+  width: var(--space-sm);
+  height: var(--space-sm);
+  border-radius: 50%;
+  background-color: #25d366;
+}
+
+.site-footer__instagram {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.site-footer__instagram span {
+  flex-shrink: 0;
+  font-size: 1.25em;
+  font-weight: 400;
+  transition: transform var(--transition-fast);
+}
+
+.site-footer a:focus-visible {
+  outline-color: var(--color-gold);
+  box-shadow: none;
+}
+
+.site-footer__nav-link:focus-visible,
+.site-footer__whatsapp:focus-visible,
+.site-footer__instagram:focus-visible {
+  color: var(--color-white);
+}
+
+.site-footer__whatsapp:focus-visible,
+.site-footer__instagram:focus-visible {
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+}
+
+.site-footer__instagram:focus-visible span {
+  transform: translate(var(--space-xs), calc(var(--space-xs) * -1));
+}
+
+.site-footer__bottom {
+  padding-block-start: var(--space-lg);
+  border-block-start: 1px solid color-mix(in srgb, var(--color-white) 16%, transparent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-cta__link:hover {
+    border-color: var(--color-gold);
+    background-color: var(--color-gold);
+    color: var(--color-black);
+  }
+
+  .contact-cta__link:hover span {
+    transform: translateX(var(--space-xs));
+  }
+
+  .site-footer__nav-link:hover,
+  .site-footer__whatsapp:hover,
+  .site-footer__instagram:hover {
+    color: var(--color-white);
+  }
+
+  .site-footer__nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .site-footer__whatsapp:hover,
+  .site-footer__instagram:hover {
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+  }
+
+  .site-footer__instagram:hover span {
+    transform: translate(var(--space-xs), calc(var(--space-xs) * -1));
+  }
+}
+
+.contact-cta__link:active {
+  border-color: var(--color-gold-dark);
+  background-color: var(--color-gold-dark);
+  color: var(--color-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-cta__link:hover span,
+  .contact-cta__link:focus-visible span,
+  .site-footer__instagram:hover span,
+  .site-footer__instagram:focus-visible span {
+    transform: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-footer__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__brand-column {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .contact-cta__inner {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .site-footer__main {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.65fr) minmax(0, 1fr);
+  }
+
+  .site-footer__brand-column {
+    grid-column: auto;
+  }
+}

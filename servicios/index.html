@@ -123,9 +123,14 @@
     </section>
 
     <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
-      <h2 id="cotizacion-title">Solicita una cotización</h2>
-      <p>Cuéntanos qué trabajo necesitas realizar.</p>
-      <a class="button-link" href="../contacto/">Solicitar cotización</a>
+      <div class="container contact-cta__inner">
+        <div class="contact-cta__content">
+          <p class="contact-cta__eyebrow">TU PRÓXIMO PROYECTO</p>
+          <h2 id="cotizacion-title">¿Tienes una obra en mente?</h2>
+          <p class="contact-cta__description">Cuéntanos qué necesitas y conversemos sobre tu reforma o proyecto.</p>
+        </div>
+        <a class="button-link contact-cta__link" href="../contacto/">Solicitar cotización <span aria-hidden="true">→</span></a>
+      </div>
     </section>
   </main>
 
@@ -133,24 +138,44 @@
        PIE DE PÁGINA
   ========================= -->
   <footer class="site-footer">
-    <a class="site-brand" href="../">Silveira Construcciones</a>
-    <nav aria-label="Navegación del pie de página">
-      <ul class="footer-nav-list">
-        <li><a href="../">Inicio</a></li>
-        <li><a href="../proyectos/">Proyectos</a></li>
-        <li><a href="../servicios/" aria-current="page">Servicios</a></li>
-        <li><a href="../#nosotros">Nosotros</a></li>
-        <li><a href="../contacto/">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="footer-contact">
-      <a href="../contacto/">Contacto y cotizaciones</a>
-      <!-- Pendiente: incorporar los datos de contacto verificados en un elemento address. -->
+    <div class="container site-footer__inner">
+      <div class="site-footer__main">
+        <div class="site-footer__brand-column">
+          <a class="site-footer__brand" href="../" aria-label="Silveira Construcciones — Inicio">
+            <img class="site-footer__brand-logo" src="../images/brand/silveira-logo.png" alt="">
+            <span class="site-footer__brand-text">
+              <span class="site-footer__brand-name">Silveira Construcciones</span>
+              <span class="site-footer__brand-tagline">REFORMAS · CONSTRUCCIÓN</span>
+            </span>
+          </a>
+          <p class="site-footer__description">Reformas, construcción y terminaciones con atención al detalle y compromiso con cada obra.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Navegación del pie de página">
+          <h2 class="site-footer__column-title">NAVEGACIÓN</h2>
+          <ul class="site-footer__nav-list">
+            <li><a class="site-footer__nav-link" href="../">Inicio</a></li>
+            <li><a class="site-footer__nav-link" href="../proyectos/">Proyectos</a></li>
+            <li><a class="site-footer__nav-link" href="../servicios/" aria-current="page">Servicios</a></li>
+            <li><a class="site-footer__nav-link" href="../#nosotros">Nosotros</a></li>
+            <li><a class="site-footer__nav-link" href="../contacto/">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__contact">
+          <h2 class="site-footer__column-title">CONTACTO</h2>
+          <address class="site-footer__contact-details">
+            <div class="site-footer__contact-group">
+              <p class="site-footer__contact-label">WHATSAPP</p>
+              <a class="site-footer__whatsapp" href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto." target="_blank" rel="noopener noreferrer">091 462 213</a>
+            </div>
+            <div class="site-footer__contact-group">
+              <p class="site-footer__contact-label">INSTAGRAM</p>
+              <a class="site-footer__instagram" href="https://www.instagram.com/silveira.construcciones/" target="_blank" rel="noopener noreferrer">@silveira.construcciones <span aria-hidden="true">↗</span></a>
+            </div>
+          </address>
+        </div>
+      </div>
+      <p class="site-footer__bottom">&copy; Silveira Construcciones</p>
     </div>
-    <div class="footer-social">
-      <!-- Pendiente: incorporar el enlace al perfil real de Instagram una vez confirmada su URL. -->
-    </div>
-    <p class="copyright"><small>&copy; Silveira Construcciones</small></p>
   </footer>
 </body>
 </html>

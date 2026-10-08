@@ -1,0 +1,5 @@
+id: revestimiento-piedra-natural
+title: Revestimiento en piedra natural
+location: Prado, Montevideo
+cover: img-09.jpg
+showOnHome: false
