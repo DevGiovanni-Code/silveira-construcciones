@@ -1104,14 +1104,16 @@ body.is-project-gallery-open {
 
 .services-section .services-list {
   padding: 0;
-  border-block-start: 1px solid color-mix(in srgb, var(--color-dark) 18%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-dark) 18%, transparent);
   list-style: none;
 }
 
 .services-section .services-list li {
   position: relative;
   padding-block: var(--space-lg);
-  border-block-end: 1px solid color-mix(in srgb, var(--color-dark) 18%, transparent);
+  border-block-end: 1px solid
+    color-mix(in srgb, var(--color-dark) 18%, transparent);
   font-size: var(--font-size-h3);
   font-weight: 600;
   line-height: 1.3;
@@ -1368,7 +1370,8 @@ body.is-project-gallery-open {
   align-items: center;
   gap: var(--space-xl);
   padding-block: var(--section-spacing);
-  border-block-start: 1px solid color-mix(in srgb, var(--color-dark) 18%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-dark) 18%, transparent);
 }
 
 .services-page-content__header + .service-feature {
@@ -1461,7 +1464,8 @@ body.is-project-gallery-open {
 .home-about__subsection {
   margin-block-start: var(--section-spacing);
   padding-block-start: var(--space-xl);
-  border-block-start: 1px solid color-mix(in srgb, var(--color-white) 16%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-white) 16%, transparent);
 }
 
 .home-about__subsection-header {
@@ -2133,7 +2137,8 @@ body.is-project-gallery-open {
 
 .site-footer__bottom {
   padding-block-start: var(--space-lg);
-  border-block-start: 1px solid color-mix(in srgb, var(--color-white) 16%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-white) 16%, transparent);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2205,5 +2210,105 @@ body.is-project-gallery-open {
 
   .site-footer__brand-column {
     grid-column: auto;
+  }
+}
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+.floating-whatsapp {
+  position: fixed;
+  inset-inline-end: clamp(var(--space-md), 3vw, var(--space-xl));
+  inset-block-end: calc(
+    clamp(var(--space-md), 3vw, var(--space-xl)) +
+      env(safe-area-inset-bottom, 0px)
+  );
+  z-index: 15;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding-inline: 0.875rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #25d366;
+  color: var(--color-black);
+  text-decoration: none;
+  box-shadow: 0 0.4rem 1rem rgb(0 0 0 / 18%);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    width var(--transition-base);
+}
+
+.floating-whatsapp__label {
+  max-width: 0;
+  margin-inline-end: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: translateX(0.25rem);
+  transition:
+    max-width var(--transition-base),
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    margin-inline-end var(--transition-base);
+}
+
+.floating-whatsapp__icon {
+  flex: 0 0 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floating-whatsapp:hover {
+    background-color: #20bd5a;
+    transform: translateY(-2px);
+    box-shadow: 0 0.65rem 1.25rem rgb(0 0 0 / 22%);
+  }
+}
+
+@media (min-width: 64rem) and (hover: hover) and (pointer: fine) {
+  .floating-whatsapp:hover,
+  .floating-whatsapp:focus-visible {
+    width: 11.25rem;
+    background-color: #20bd5a;
+    color: var(--color-white);
+  }
+
+  .floating-whatsapp:hover .floating-whatsapp__label,
+  .floating-whatsapp:focus-visible .floating-whatsapp__label {
+    max-width: 7rem;
+    margin-inline-end: var(--space-sm);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.floating-whatsapp:active {
+  background-color: #1aa34c;
+  transform: translateY(0);
+}
+
+.floating-whatsapp:focus-visible {
+  box-shadow:
+    0 0 0 3px var(--color-white),
+    0 0.4rem 1rem rgb(0 0 0 / 18%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp:hover,
+  .floating-whatsapp:focus-visible,
+  .floating-whatsapp:active,
+  .floating-whatsapp__label,
+  .floating-whatsapp:hover .floating-whatsapp__label,
+  .floating-whatsapp:focus-visible .floating-whatsapp__label {
+    transform: none;
   }
 }
