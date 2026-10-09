@@ -1,0 +1,5 @@
+id: 3-banos-completos-cordon
+title: Reforma completa de tres baños
+location: Cordón, Montevideo
+cover: img-06.jpg
+showOnHome: false

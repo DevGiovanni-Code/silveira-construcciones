@@ -732,12 +732,14 @@ a:active {
 .projects-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  align-items: start;
+  align-items: stretch;
   gap: var(--space-2xl) var(--space-xl);
   margin-block-start: var(--space-2xl);
 }
 
 .project-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
   width: 100%;
   max-width: 24rem;
   min-width: 0;
@@ -774,6 +776,7 @@ a:active {
 
 .project-card__content {
   display: grid;
+  grid-template-rows: auto auto 1fr;
   gap: var(--space-sm);
   padding-block-start: var(--space-lg);
 }
@@ -787,6 +790,7 @@ a:active {
 }
 
 .project-card__actions {
+  align-self: end;
   margin-block-start: var(--space-sm);
 }
 

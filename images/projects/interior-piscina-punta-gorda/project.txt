@@ -1,0 +1,5 @@
+id: interior-piscina-punta-gorda
+title: Revestimiento interior cerámico en piscina
+location: Punta Gorda, Montevideo
+cover: img-10.jpg
+showOnHome: false
