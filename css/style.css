@@ -1333,14 +1333,6 @@ body.is-project-gallery-open {
   object-position: center 55%;
 }
 
-.services-page-intro__media figcaption,
-.service-feature__media figcaption {
-  margin-block-start: var(--space-sm);
-  color: var(--color-gray);
-  font-size: var(--font-size-small);
-  line-height: 1.5;
-}
-
 .services-page-content {
   padding-block-start: var(--space-xl);
   background-color: var(--color-white);
