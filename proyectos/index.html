@@ -1,154 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos | Silveira Construcciones</title>
-  <link rel="icon" type="image/png" href="../images/brand/silveira-logo.png">
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js" defer></script>
-  <script type="module" src="../js/projects.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explorá proyectos reales de Silveira Construcciones: reformas de baños y cocinas, revestimientos, piscinas y otras obras en Uruguay."
+    />
+    <title>Proyectos | Silveira Construcciones</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/brand/silveira-logo.png"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js" defer></script>
+    <script type="module" src="../js/projects.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">
+      Saltar al contenido principal
+    </a>
 
-  <!-- =========================
+    <!-- =========================
        CABECERA Y NAVEGACIÓN
   ========================= -->
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="header-brand" href="../" aria-label="Silveira Construcciones — Inicio">
-        <img class="header-brand__logo" src="../images/brand/silveira-logo.png" alt="">
-        <span class="header-brand__text">
-          <span class="header-brand__name">Silveira Construcciones</span>
-          <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú de navegación" hidden>
-        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>Menú</span>
-      </button>
-      <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
-        <ul class="nav-list">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a
+          class="header-brand"
+          href="../"
+          aria-label="Silveira Construcciones — Inicio"
+        >
+          <img
+            class="header-brand__logo"
+            src="../images/brand/silveira-logo.png"
+            alt=""
+          />
+          <span class="header-brand__text">
+            <span class="header-brand__name">Silveira Construcciones</span>
+            <span class="header-brand__tagline">REFORMAS · CONSTRUCCIÓN</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+          hidden
+        >
+          <span class="menu-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>Menú</span>
+        </button>
+        <nav
+          id="main-navigation"
+          class="main-nav"
+          aria-label="Navegación principal"
+        >
+          <ul class="nav-list">
             <li><a class="nav-link" href="../">Inicio</a></li>
-            <li><a class="nav-link" href="../proyectos/" aria-current="page">Proyectos</a></li>
+            <li>
+              <a class="nav-link" href="../proyectos/" aria-current="page">
+                Proyectos
+              </a>
+            </li>
             <li><a class="nav-link" href="../servicios/">Servicios</a></li>
             <li><a class="nav-link" href="../#nosotros">Nosotros</a></li>
             <li><a class="nav-link" href="../contacto/">Contacto</a></li>
-        </ul>
-        <a class="button-link button-link--secondary header-cta" href="../contacto/">Solicitar cotización</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="contenido-principal" tabindex="-1">
-    <header class="page-intro projects-page-intro section-spacing">
-      <div class="container projects-intro">
-        <h1 id="page-title">Proyectos</h1>
-        <p>Trabajos reales realizados por Silveira Construcciones.</p>
+          </ul>
+          <a
+            class="button-link button-link--secondary header-cta"
+            href="../contacto/"
+          >
+            Solicitar cotización
+          </a>
+        </nav>
       </div>
     </header>
 
-    <!-- =========================
+    <main id="contenido-principal" tabindex="-1">
+      <header class="page-intro projects-page-intro section-spacing">
+        <div class="container projects-intro">
+          <h1 id="page-title">Proyectos</h1>
+          <p>Trabajos reales realizados por Silveira Construcciones.</p>
+        </div>
+      </header>
+
+      <!-- =========================
          GALERÍA DE PROYECTOS
     ========================= -->
 
-    <section id="project-gallery" class="projects-section section-spacing" aria-labelledby="project-gallery-title">
-      <div class="container">
-        <div class="projects-intro">
-          <h2 id="project-gallery-title">Galería de trabajos</h2>
-        </div>
-        <div class="projects-grid" data-projects="all"></div>
-      </div>
-    </section>
-
-    <dialog id="project-gallery-dialog" class="project-gallery" aria-labelledby="project-gallery-dialog-title" aria-describedby="project-gallery-location">
-      <div class="project-gallery__panel">
-        <header class="project-gallery__header">
-          <div>
-            <h2 id="project-gallery-dialog-title" class="project-gallery__title"></h2>
-            <p id="project-gallery-location" class="project-gallery__location"></p>
+      <section
+        id="project-gallery"
+        class="projects-section section-spacing"
+        aria-labelledby="project-gallery-title"
+      >
+        <div class="container">
+          <div class="projects-intro">
+            <h2 id="project-gallery-title">Galería de trabajos</h2>
           </div>
-          <button class="project-gallery__control project-gallery__close" type="button" aria-label="Cerrar galería">×</button>
-        </header>
-
-        <div class="project-gallery__stage">
-          <img class="project-gallery__image" alt="">
+          <div class="projects-grid" data-projects="all"></div>
         </div>
+      </section>
 
-        <div class="project-gallery__controls">
-          <button class="project-gallery__control project-gallery__previous" type="button" aria-label="Foto anterior">←</button>
-          <p class="project-gallery__counter" aria-live="polite"></p>
-          <button class="project-gallery__control project-gallery__next" type="button" aria-label="Foto siguiente">→</button>
+      <dialog
+        id="project-gallery-dialog"
+        class="project-gallery"
+        aria-labelledby="project-gallery-dialog-title"
+        aria-describedby="project-gallery-location"
+      >
+        <div class="project-gallery__panel">
+          <header class="project-gallery__header">
+            <div>
+              <h2
+                id="project-gallery-dialog-title"
+                class="project-gallery__title"
+              ></h2>
+              <p
+                id="project-gallery-location"
+                class="project-gallery__location"
+              ></p>
+            </div>
+            <button
+              class="project-gallery__control project-gallery__close"
+              type="button"
+              aria-label="Cerrar galería"
+            >
+              ×
+            </button>
+          </header>
+
+          <div class="project-gallery__stage">
+            <img class="project-gallery__image" alt="" />
+          </div>
+
+          <div class="project-gallery__controls">
+            <button
+              class="project-gallery__control project-gallery__previous"
+              type="button"
+              aria-label="Foto anterior"
+            >
+              ←
+            </button>
+            <p class="project-gallery__counter" aria-live="polite"></p>
+            <button
+              class="project-gallery__control project-gallery__next"
+              type="button"
+              aria-label="Foto siguiente"
+            >
+              →
+            </button>
+          </div>
         </div>
-      </div>
-    </dialog>
+      </dialog>
 
-    <section id="cotizacion" class="contact-cta" aria-labelledby="cotizacion-title">
-      <div class="container contact-cta__inner">
-        <div class="contact-cta__content">
-          <p class="contact-cta__eyebrow">TU PRÓXIMO PROYECTO</p>
-          <h2 id="cotizacion-title">¿Tienes una obra en mente?</h2>
-          <p class="contact-cta__description">Cuéntanos qué necesitas y conversemos sobre tu reforma o proyecto.</p>
+      <section
+        id="cotizacion"
+        class="contact-cta"
+        aria-labelledby="cotizacion-title"
+      >
+        <div class="container contact-cta__inner">
+          <div class="contact-cta__content">
+            <p class="contact-cta__eyebrow">TU PRÓXIMO PROYECTO</p>
+            <h2 id="cotizacion-title">¿Tienes una obra en mente?</h2>
+            <p class="contact-cta__description">
+              Cuéntanos qué necesitas y conversemos sobre tu reforma o proyecto.
+            </p>
+          </div>
+          <a class="button-link contact-cta__link" href="../contacto/">
+            Solicitar cotización
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
-        <a class="button-link contact-cta__link" href="../contacto/">Solicitar cotización <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- =========================
+    <!-- =========================
        PIE DE PÁGINA
   ========================= -->
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__main">
-        <div class="site-footer__brand-column">
-          <a class="site-footer__brand" href="../" aria-label="Silveira Construcciones — Inicio">
-            <img class="site-footer__brand-logo" src="../images/brand/silveira-logo.png" alt="">
-            <span class="site-footer__brand-text">
-              <span class="site-footer__brand-name">Silveira Construcciones</span>
-              <span class="site-footer__brand-tagline">REFORMAS · CONSTRUCCIÓN</span>
-            </span>
-          </a>
-          <p class="site-footer__description">Reformas, construcción y terminaciones con atención al detalle y compromiso con cada obra.</p>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__main">
+          <div class="site-footer__brand-column">
+            <a
+              class="site-footer__brand"
+              href="../"
+              aria-label="Silveira Construcciones — Inicio"
+            >
+              <img
+                class="site-footer__brand-logo"
+                src="../images/brand/silveira-logo.png"
+                alt=""
+              />
+              <span class="site-footer__brand-text">
+                <span class="site-footer__brand-name">
+                  Silveira Construcciones
+                </span>
+                <span class="site-footer__brand-tagline">
+                  REFORMAS · CONSTRUCCIÓN
+                </span>
+              </span>
+            </a>
+            <p class="site-footer__description">
+              Reformas, construcción y terminaciones con atención al detalle y
+              compromiso con cada obra.
+            </p>
+          </div>
+          <nav
+            class="site-footer__nav"
+            aria-label="Navegación del pie de página"
+          >
+            <h2 class="site-footer__column-title">NAVEGACIÓN</h2>
+            <ul class="site-footer__nav-list">
+              <li><a class="site-footer__nav-link" href="../">Inicio</a></li>
+              <li>
+                <a
+                  class="site-footer__nav-link"
+                  href="../proyectos/"
+                  aria-current="page"
+                >
+                  Proyectos
+                </a>
+              </li>
+              <li>
+                <a class="site-footer__nav-link" href="../servicios/">
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a class="site-footer__nav-link" href="../#nosotros">
+                  Nosotros
+                </a>
+              </li>
+              <li>
+                <a class="site-footer__nav-link" href="../contacto/">
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="site-footer__contact">
+            <h2 class="site-footer__column-title">CONTACTO</h2>
+            <address class="site-footer__contact-details">
+              <div class="site-footer__contact-group">
+                <p class="site-footer__contact-label">WHATSAPP</p>
+                <a
+                  class="site-footer__whatsapp"
+                  href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  091 462 213
+                </a>
+              </div>
+              <div class="site-footer__contact-group">
+                <p class="site-footer__contact-label">INSTAGRAM</p>
+                <a
+                  class="site-footer__instagram"
+                  href="https://www.instagram.com/silveira.construcciones/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @silveira.construcciones
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </address>
+          </div>
         </div>
-        <nav class="site-footer__nav" aria-label="Navegación del pie de página">
-          <h2 class="site-footer__column-title">NAVEGACIÓN</h2>
-          <ul class="site-footer__nav-list">
-            <li><a class="site-footer__nav-link" href="../">Inicio</a></li>
-            <li><a class="site-footer__nav-link" href="../proyectos/" aria-current="page">Proyectos</a></li>
-            <li><a class="site-footer__nav-link" href="../servicios/">Servicios</a></li>
-            <li><a class="site-footer__nav-link" href="../#nosotros">Nosotros</a></li>
-            <li><a class="site-footer__nav-link" href="../contacto/">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="site-footer__contact">
-          <h2 class="site-footer__column-title">CONTACTO</h2>
-          <address class="site-footer__contact-details">
-            <div class="site-footer__contact-group">
-              <p class="site-footer__contact-label">WHATSAPP</p>
-              <a class="site-footer__whatsapp" href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto." target="_blank" rel="noopener noreferrer">091 462 213</a>
-            </div>
-            <div class="site-footer__contact-group">
-              <p class="site-footer__contact-label">INSTAGRAM</p>
-              <a class="site-footer__instagram" href="https://www.instagram.com/silveira.construcciones/" target="_blank" rel="noopener noreferrer">@silveira.construcciones <span aria-hidden="true">↗</span></a>
-            </div>
-          </address>
-        </div>
+        <p class="site-footer__bottom">&copy; Silveira Construcciones</p>
       </div>
-      <p class="site-footer__bottom">&copy; Silveira Construcciones</p>
-    </div>
-  </footer>
+    </footer>
 
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Consultar ahora por WhatsApp (se abre en una nueva pestaña)"
-  >
-    <span class="floating-whatsapp__label">Consultar ahora</span>
-    <svg class="floating-whatsapp__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.13-1.35A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/></svg>
-  </a>
-</body>
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/59891462213?text=Hola%2C%20vengo%20desde%20el%20sitio%20web%20de%20Silveira%20Construcciones%20y%20me%20gustar%C3%ADa%20consultar%20por%20mi%20reforma%2Fproyecto."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Consultar ahora por WhatsApp (se abre en una nueva pestaña)"
+    >
+      <span class="floating-whatsapp__label">Consultar ahora</span>
+      <svg
+        class="floating-whatsapp__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M12 2a10 10 0 0 0-8.66 15L2 22l5.13-1.35A10 10 0 1 0 12 2Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"
+        />
+      </svg>
+    </a>
+  </body>
 </html>
