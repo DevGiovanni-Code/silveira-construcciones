@@ -976,6 +976,13 @@ body.is-project-gallery-open {
   transition: color var(--transition-fast);
 }
 
+/* Evita el zoom accidental en los controles de la galería móvil. */
+@media (hover: none) and (pointer: coarse) {
+  .project-gallery__control {
+    touch-action: manipulation;
+  }
+}
+
 .project-gallery__control:disabled {
   opacity: 0.3;
 }

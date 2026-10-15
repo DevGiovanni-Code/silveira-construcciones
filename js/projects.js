@@ -1,93 +1,116 @@
-import { projects } from './projects-data.js';
+import { projects } from "./projects-data.js";
 
-const galleryDialog = document.querySelector('#project-gallery-dialog');
-const galleryTitle = galleryDialog?.querySelector('.project-gallery__title');
-const galleryLocation = galleryDialog?.querySelector('.project-gallery__location');
-const galleryImage = galleryDialog?.querySelector('.project-gallery__image');
-const galleryCounter = galleryDialog?.querySelector('.project-gallery__counter');
-const galleryClose = galleryDialog?.querySelector('.project-gallery__close');
-const galleryPrevious = galleryDialog?.querySelector('.project-gallery__previous');
-const galleryNext = galleryDialog?.querySelector('.project-gallery__next');
+const galleryDialog = document.querySelector("#project-gallery-dialog");
+const galleryTitle = galleryDialog?.querySelector(".project-gallery__title");
+const galleryLocation = galleryDialog?.querySelector(
+  ".project-gallery__location",
+);
+const galleryImage = galleryDialog?.querySelector(".project-gallery__image");
+const galleryCounter = galleryDialog?.querySelector(
+  ".project-gallery__counter",
+);
+const galleryClose = galleryDialog?.querySelector(".project-gallery__close");
+const galleryPrevious = galleryDialog?.querySelector(
+  ".project-gallery__previous",
+);
+const galleryNext = galleryDialog?.querySelector(".project-gallery__next");
 
 let activeProject = null;
 let activeImageIndex = 0;
 let activeTrigger = null;
 
 function getProjectImageUrl(project, fileName) {
-  return new URL(`../images/projects/${project.folder}/${fileName}`, import.meta.url).href;
+  return new URL(
+    `../images/projects/${project.folder}/${fileName}`,
+    import.meta.url,
+  ).href;
 }
 
 function getProjectUrl(project) {
-  const url = new URL('../proyectos/index.html', import.meta.url);
+  const url = new URL("../proyectos/index.html", import.meta.url);
   url.hash = project.id;
   return url.href;
 }
 
 function createProjectCard(project, isHome) {
-  const article = document.createElement('article');
-  article.className = 'project-card';
+  const article = document.createElement("article");
+  article.className = "project-card";
   article.dataset.projectId = project.id;
 
   if (!isHome) article.id = project.id;
 
-  const image = document.createElement('img');
-  image.className = 'project-card__image';
+  const image = document.createElement("img");
+  image.className = "project-card__image";
   image.src = getProjectImageUrl(project, project.cover);
   image.alt = `${project.title} en ${project.location}`;
-  image.loading = 'lazy';
+  image.loading = "lazy";
 
-  const mediaAction = document.createElement(isHome ? 'a' : 'button');
-  mediaAction.className = 'project-card__media-action';
+  const mediaAction = document.createElement(isHome ? "a" : "button");
+  mediaAction.className = "project-card__media-action";
 
   if (isHome) {
     mediaAction.href = getProjectUrl(project);
-    mediaAction.setAttribute('aria-label', `Ver proyecto: ${project.title} en ${project.location}`);
+    mediaAction.setAttribute(
+      "aria-label",
+      `Ver proyecto: ${project.title} en ${project.location}`,
+    );
   } else {
-    mediaAction.type = 'button';
-    mediaAction.setAttribute('aria-haspopup', 'dialog');
-    mediaAction.setAttribute('aria-controls', 'project-gallery-dialog');
-    mediaAction.setAttribute('aria-label', `Ver fotos de ${project.title} en ${project.location}`);
-    mediaAction.addEventListener('click', () => openProjectGallery(project, mediaAction));
+    mediaAction.type = "button";
+    mediaAction.setAttribute("aria-haspopup", "dialog");
+    mediaAction.setAttribute("aria-controls", "project-gallery-dialog");
+    mediaAction.setAttribute(
+      "aria-label",
+      `Ver fotos de ${project.title} en ${project.location}`,
+    );
+    mediaAction.addEventListener("click", () =>
+      openProjectGallery(project, mediaAction),
+    );
   }
 
   mediaAction.append(image);
 
-  const content = document.createElement('div');
-  content.className = 'project-card__content';
+  const content = document.createElement("div");
+  content.className = "project-card__content";
 
-  const title = document.createElement('h3');
-  title.className = 'project-card__title';
+  const title = document.createElement("h3");
+  title.className = "project-card__title";
   title.textContent = project.title;
 
-  const location = document.createElement('p');
-  location.className = 'project-card__location';
+  const location = document.createElement("p");
+  location.className = "project-card__location";
   location.textContent = project.location;
   content.append(title, location);
 
   if (isHome) {
-    const actions = document.createElement('div');
-    actions.className = 'project-card__actions';
+    const actions = document.createElement("div");
+    actions.className = "project-card__actions";
 
-    const link = document.createElement('a');
-    link.className = 'project-action project-action--navigate';
+    const link = document.createElement("a");
+    link.className = "project-action project-action--navigate";
     link.href = getProjectUrl(project);
-    link.textContent = 'Ver proyecto';
-    link.setAttribute('aria-label', `Ver proyecto: ${project.title} en ${project.location}`);
+    link.textContent = "Ver proyecto";
+    link.setAttribute(
+      "aria-label",
+      `Ver proyecto: ${project.title} en ${project.location}`,
+    );
 
     actions.append(link);
     content.append(actions);
   } else {
-    const actions = document.createElement('div');
-    actions.className = 'project-card__actions';
+    const actions = document.createElement("div");
+    actions.className = "project-card__actions";
 
-    const button = document.createElement('button');
-    button.className = 'project-action';
-    button.type = 'button';
+    const button = document.createElement("button");
+    button.className = "project-action";
+    button.type = "button";
     button.textContent = `Ver fotos · ${project.images.length}`;
-    button.setAttribute('aria-haspopup', 'dialog');
-    button.setAttribute('aria-controls', 'project-gallery-dialog');
-    button.setAttribute('aria-label', `Ver fotos de ${project.title} en ${project.location}`);
-    button.addEventListener('click', () => openProjectGallery(project, button));
+    button.setAttribute("aria-haspopup", "dialog");
+    button.setAttribute("aria-controls", "project-gallery-dialog");
+    button.setAttribute(
+      "aria-label",
+      `Ver fotos de ${project.title} en ${project.location}`,
+    );
+    button.addEventListener("click", () => openProjectGallery(project, button));
 
     actions.append(button);
     content.append(actions);
@@ -98,10 +121,14 @@ function createProjectCard(project, isHome) {
 }
 
 // Una misma estructura sirve para la selección de Inicio y el listado completo.
-document.querySelectorAll('[data-projects]').forEach((container) => {
-  const isHome = container.dataset.projects === 'home';
-  const visibleProjects = isHome ? projects.filter((project) => project.showOnHome === true) : projects;
-  container.replaceChildren(...visibleProjects.map((project) => createProjectCard(project, isHome)));
+document.querySelectorAll("[data-projects]").forEach((container) => {
+  const isHome = container.dataset.projects === "home";
+  const visibleProjects = isHome
+    ? projects.filter((project) => project.showOnHome === true)
+    : projects;
+  container.replaceChildren(
+    ...visibleProjects.map((project) => createProjectCard(project, isHome)),
+  );
 });
 
 const projectsList = document.querySelector('[data-projects="all"]');
@@ -115,18 +142,20 @@ function scrollToProject() {
     return;
   }
 
-  const project = Array.from(projectsList.children).find((card) => card.dataset.projectId === projectId);
+  const project = Array.from(projectsList.children).find(
+    (card) => card.dataset.projectId === projectId,
+  );
   if (!project) return;
 
   // Espera al renderizado y posiciona sin animación ni cambio de foco.
   requestAnimationFrame(() => {
-    project.scrollIntoView({ behavior: 'instant', block: 'start' });
+    project.scrollIntoView({ behavior: "instant", block: "start" });
   });
 }
 
 if (projectsList) {
   scrollToProject();
-  window.addEventListener('hashchange', scrollToProject);
+  window.addEventListener("hashchange", scrollToProject);
 }
 
 function preloadAdjacentImages() {
@@ -140,11 +169,15 @@ function preloadAdjacentImages() {
 }
 
 function showGalleryImage(index) {
-  if (!activeProject || index < 0 || index >= activeProject.images.length) return;
+  if (!activeProject || index < 0 || index >= activeProject.images.length)
+    return;
 
   activeImageIndex = index;
   const total = activeProject.images.length;
-  galleryImage.src = getProjectImageUrl(activeProject, activeProject.images[index]);
+  galleryImage.src = getProjectImageUrl(
+    activeProject,
+    activeProject.images[index],
+  );
   galleryImage.alt = `${activeProject.title} en ${activeProject.location} — foto ${index + 1} de ${total}`;
   galleryCounter.textContent = `${index + 1} / ${total}`;
 
@@ -172,35 +205,129 @@ function openProjectGallery(project, trigger) {
   galleryLocation.textContent = project.location;
   showGalleryImage(activeImageIndex);
   galleryDialog.showModal();
-  document.body.classList.add('is-project-gallery-open');
+  document.body.classList.add("is-project-gallery-open");
   galleryClose.focus({ preventScroll: true });
 }
 
-if (galleryDialog) {
-  galleryPrevious.addEventListener('click', () => showGalleryImage(activeImageIndex - 1));
-  galleryNext.addEventListener('click', () => showGalleryImage(activeImageIndex + 1));
-  galleryClose.addEventListener('click', () => galleryDialog.close());
+// Navegación táctil exclusiva para la galería en dispositivos móviles.
+function enableMobileGallerySwipe() {
+  const galleryStage = galleryDialog.querySelector(".project-gallery__stage");
+  const mobileQuery = window.matchMedia("(hover: none) and (pointer: coarse)");
 
-  galleryDialog.addEventListener('keydown', (event) => {
+  const minimumDistance = 50;
+  const directionRatio = 1.5;
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let trackingTouch = false;
+
+  galleryStage.addEventListener(
+    "touchstart",
+    (event) => {
+      trackingTouch = false;
+
+      if (
+        !mobileQuery.matches ||
+        !activeProject ||
+        event.touches.length !== 1
+      ) {
+        return;
+      }
+
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      trackingTouch = true;
+    },
+    { passive: true },
+  );
+
+  galleryStage.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches.length !== 1) {
+        trackingTouch = false;
+      }
+    },
+    { passive: true },
+  );
+
+  galleryStage.addEventListener(
+    "touchend",
+    (event) => {
+      if (!trackingTouch || !mobileQuery.matches || !activeProject) {
+        trackingTouch = false;
+        return;
+      }
+
+      trackingTouch = false;
+
+      if (event.changedTouches.length !== 1 || event.touches.length !== 0) {
+        return;
+      }
+
+      // No cambia de foto mientras la página está ampliada.
+      if (window.visualViewport && window.visualViewport.scale > 1.01) {
+        return;
+      }
+
+      const deltaX = event.changedTouches[0].clientX - touchStartX;
+      const deltaY = event.changedTouches[0].clientY - touchStartY;
+
+      if (
+        Math.abs(deltaX) < minimumDistance ||
+        Math.abs(deltaX) < Math.abs(deltaY) * directionRatio
+      ) {
+        return;
+      }
+
+      if (deltaX < 0) {
+        showGalleryImage(activeImageIndex + 1);
+      } else {
+        showGalleryImage(activeImageIndex - 1);
+      }
+    },
+    { passive: true },
+  );
+
+  galleryStage.addEventListener("touchcancel", () => {
+    trackingTouch = false;
+  });
+}
+
+if (galleryDialog) {
+  enableMobileGallerySwipe();
+  galleryPrevious.addEventListener("click", () =>
+    showGalleryImage(activeImageIndex - 1),
+  );
+  galleryNext.addEventListener("click", () =>
+    showGalleryImage(activeImageIndex + 1),
+  );
+  galleryClose.addEventListener("click", () => galleryDialog.close());
+
+  galleryDialog.addEventListener("keydown", (event) => {
     if (!activeProject) return;
 
-    if (event.key === 'ArrowLeft' && activeImageIndex > 0) {
+    if (event.key === "ArrowLeft" && activeImageIndex > 0) {
       event.preventDefault();
       showGalleryImage(activeImageIndex - 1);
-    } else if (event.key === 'ArrowRight' && activeImageIndex < activeProject.images.length - 1) {
+    } else if (
+      event.key === "ArrowRight" &&
+      activeImageIndex < activeProject.images.length - 1
+    ) {
       event.preventDefault();
       showGalleryImage(activeImageIndex + 1);
     }
   });
 
-  galleryDialog.addEventListener('click', (event) => {
+  galleryDialog.addEventListener("click", (event) => {
     if (event.target === galleryDialog) galleryDialog.close();
   });
 
   // Escape nativo, botón de cierre y backdrop comparten la misma limpieza.
-  galleryDialog.addEventListener('close', () => {
-    document.body.classList.remove('is-project-gallery-open');
-    if (activeTrigger?.isConnected) activeTrigger.focus({ preventScroll: true });
+  galleryDialog.addEventListener("close", () => {
+    document.body.classList.remove("is-project-gallery-open");
+    if (activeTrigger?.isConnected)
+      activeTrigger.focus({ preventScroll: true });
     activeProject = null;
     activeImageIndex = 0;
     activeTrigger = null;
