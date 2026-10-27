@@ -1,61 +1,99 @@
+
 # Silveira Construcciones
 
-Base do site institucional e comercial multipágina da Silveira Construcciones, organizada em HTML, CSS e JavaScript. Nesta etapa, as cinco páginas contêm apenas HTML5 mínimo, sem conteúdo no corpo, seções, layout ou interações implementadas.
+Site institucional e comercial desenvolvido para a **Silveira Construcciones**, empresa de construção e reformas residenciais no Uruguai.
 
-O CSS inclui um reset básico e variáveis para cores, espaçamentos, largura máxima do conteúdo e transições. A identidade visual combina preto/grafite, cinza, branco e dourado discreto.
+O projeto apresenta serviços, obras reais executadas pela empresa e canais de contato, com foco em uma experiência responsiva, navegação acessível e apresentação profissional dos trabalhos.
 
-## Estrutura de arquivos
+**Site publicado:** https://silveiraconstrucciones.com
 
-```text
-silveira-construcciones/
-├── index.html
-├── proyectos/
-│   └── index.html
-├── servicios/
-│   └── index.html
-├── nosotros/
-│   └── index.html
-├── contacto/
-│   └── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   ├── hero/
-│   ├── projects/
-│   ├── services/
-│   ├── about/
-│   └── instagram/
-└── README.md
-```
+## Tecnologias utilizadas
 
-As pastas de imagens estão vazias, reservadas para fotografias reais dos trabalhos da empresa.
+- **HTML5:** estrutura semântica e organização do conteúdo.
+- **CSS3:** estilos responsivos, Flexbox, variáveis CSS, transições e componentes visuais.
+- **JavaScript (ES6+):** interatividade, manipulação do DOM e módulos nativos.
+- **Git e GitHub:** versionamento e acompanhamento do desenvolvimento.
+- **Google Fonts:** tipografia Manrope.
 
-## Finalidade das páginas
+O projeto foi desenvolvido sem frameworks JavaScript e não exige processo de compilação.
 
-- **Inicio (`index.html`):** página comercial principal. Futuramente reunirá hero, prova de projetos reais, projetos destacados, antes e depois, resumo de serviços, apresentação de Nicolás Silveira, Instagram, processo de trabalho, clientes/depoimentos e chamada para orçamento.
-- **Proyectos (`proyectos/index.html`):** galeria completa de trabalhos reais. Não haverá páginas individuais de projetos; filtros por categoria e modal/lightbox poderão ser desenvolvidos posteriormente.
-- **Servicios (`servicios/index.html`):** apresentação detalhada e comercial dos serviços.
-- **Nosotros (`nosotros/index.html`):** apresentação da empresa, de Nicolás Silveira, da forma de trabalho e do posicionamento.
-- **Contacto (`contacto/index.html`):** solicitação de orçamento, formulário, WhatsApp e demais meios de contato.
+## Funcionalidades implementadas
 
-Essas funcionalidades são previstas para etapas futuras e ainda não estão implementadas.
+### Navegação e interface
 
-## Arquivos compartilhados e testes locais
+- Layout adaptável para dispositivos móveis, tablets e desktops.
+- Menu responsivo com controle de abertura e fechamento.
+- Cabeçalho com comportamento visual ajustado durante a rolagem.
+- Navegação entre páginas e seções do site.
+- Estados de foco visíveis e suporte à navegação por teclado.
+- Considerações de acessibilidade, incluindo atributos ARIA e preferência por movimento reduzido.
 
-Todas as páginas utilizam o mesmo `css/style.css` e `js/script.js`. A página inicial usa os caminhos `css/style.css` e `js/script.js`; as páginas nas subpastas usam `../css/style.css` e `../js/script.js`. O JavaScript é carregado com `defer`.
+### Apresentação dos projetos
 
-Os caminhos relativos permitem abrir diretamente cada `index.html` no navegador ou testar o projeto por um servidor local, preservando a estrutura de pastas. As páginas aparecerão vazias nesta etapa.
+- Galeria de fotografias de obras reais da empresa.
+- Projetos destacados na página inicial.
+- Página dedicada à apresentação dos projetos.
+- Galeria interativa com navegação entre fotografias.
+- Controles por teclado e gestos de toque em dispositivos compatíveis.
+- Contador de imagens e pré-carregamento de fotografias adjacentes.
+- Dados dos projetos organizados separadamente da lógica de apresentação.
 
-Para publicar, envie o conteúdo completo desta pasta para uma hospedagem estática que sirva `index.html` como documento padrão dos diretórios. Assim, as páginas internas poderão ser acessadas por `/proyectos/`, `/servicios/`, `/nosotros/` e `/contacto/` quando o site estiver na raiz do domínio. Não é necessário um processo de compilação.
+### Contato comercial
 
-## Convenções do projeto
+- Página de contato com informações para consultas.
+- Formulário para preparar uma mensagem personalizada.
+- Integração com WhatsApp por meio de URL com texto codificado.
+- Links para os canais oficiais da empresa.
 
-- Conteúdo visível e comentários organizacionais em espanhol.
-- Classes, variáveis, funções e nomes internos em inglês. As pastas das páginas usam os nomes em espanhol definidos na arquitetura para as URLs públicas.
-- Fotografias e informações reais, sem inventar projetos, clientes, números ou depoimentos.
-- Desenvolvimento incremental: HTML e revisão estrutural, CSS e revisão responsiva, JavaScript necessário, testes e refinamentos.
-- Alterações limitadas à tarefa solicitada, preservando as partes aprovadas e sem avançar automaticamente para a próxima etapa.
+O formulário não utiliza banco de dados nem armazena as informações enviadas em um servidor próprio.
 
-O CSS e o JavaScript existentes foram preservados nesta refatoração, incluindo as variáveis CSS.
+## Estrutura do projeto
+
+- `index.html` — página inicial, apresentação da empresa, projetos destacados e outras seções institucionais.
+- `proyectos/index.html` — apresentação dos projetos e galeria interativa.
+- `servicios/index.html` — informações sobre os serviços oferecidos.
+- `contacto/index.html` — canais de contato e formulário integrado ao WhatsApp.
+- `css/style.css` — estilos globais, componentes e regras responsivas.
+- `js/script.js` — navegação, comportamento do cabeçalho e formulário de contato.
+- `js/projects.js` — renderização dos projetos e lógica da galeria.
+- `js/projects-data.js` — dados e referências das fotografias dos projetos.
+- `images/` — recursos gráficos e fotografias utilizados no site.
+
+A seção institucional *Nosotros* está integrada à página inicial.
+
+## Organização e decisões técnicas
+
+O desenvolvimento foi realizado de forma incremental, com versionamento por Git.
+
+Entre as decisões adotadas estão:
+
+- Separação entre estrutura HTML, apresentação CSS e comportamento JavaScript.
+- Reutilização dos estilos e componentes nas diferentes páginas.
+- Utilização de módulos JavaScript nativos para organizar a galeria de projetos.
+- Uso de caminhos relativos para navegação e carregamento de recursos.
+- Estrutura semântica e cuidados com acessibilidade.
+- Interface adaptável a diferentes tamanhos de tela.
+- Utilização de fotografias de trabalhos reais da empresa.
+
+O conteúdo público do site está em espanhol, enquanto identificadores internos do código utilizam principalmente inglês.
+
+## Executando localmente
+
+O projeto é um site estático e não necessita de instalação de dependências JavaScript.
+
+1. Clone ou baixe o repositório.
+2. Abra a pasta do projeto no editor de sua preferência.
+3. Inicie um servidor HTTP local, como o Live Server do VS Code.
+4. Acesse a página inicial pelo navegador.
+
+Recomenda-se executar o projeto por um servidor local, pois os módulos JavaScript podem apresentar restrições quando os arquivos são abertos diretamente pelo protocolo `file://`.
+
+## Projeto profissional
+
+Este site foi desenvolvido por **Giovanni Silveira** para a Silveira Construcciones, como projeto real de desenvolvimento web front-end.
+
+**Desenvolvedor:** [Giovanni Silveira](https://github.com/DevGiovanni-Code)
+
+**Site oficial:** https://silveiraconstrucciones.com
+
+As fotografias documentam projetos reais executados pela Silveira Construcciones e pertencem à empresa. Sua utilização neste repositório está vinculada à apresentação deste projeto, não implicando autorização para reutilização por terceiros.
